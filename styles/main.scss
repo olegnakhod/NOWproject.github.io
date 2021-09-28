@@ -1,0 +1,1168 @@
+@import "css/base/mixins";
+@import "css/base/varialebs";
+@import url(css/base/fonts.css);
+
+html {
+    width: 1440px;
+    margin: 0 auto;
+    font-family: $main-font;
+}
+
+header,
+body,
+footer {
+    width: 100%;
+}
+
+.gradient {
+    width: 100%;
+    height: 100%;
+    background-color: #0000005d;
+}
+
+header .gradient {
+    background: linear-gradient(360deg, #ff4e512f 0%, #f9d52331 100%);
+    background-color: #0000005d;
+}
+
+.container {
+    width: 940px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p {
+    font-size: 14px;
+    line-height: 14px;
+    color: $main-color;
+    font-family: $text-font;
+}
+
+h2 {
+    font-size: 26px;
+    line-height: 32px;
+}
+
+header {
+    height: 700px;
+    background-image: url(img/Bitmap.png);
+    background-size: cover;
+    background-position: center;
+
+    .blockTitle {
+        width: 470px;
+        @include flex(flex, column, center, center);
+        margin: 147px 0px 0px 0px;
+        h1 {
+            margin: 0px 0px 0px 0px;
+            display: block;
+            font-size: 52px;
+            line-height: 63.39px;
+            color: $main-color;
+        }
+        p {
+            margin: 28px 0px 0px 1px;
+            font-size: 24px;
+            line-height: 24.5px;
+            font-family: $text-font;
+            color: $main-color;
+        }
+        h5 {
+            width: 152px;
+            font-size: 20px;
+            text-transform: uppercase;
+            font-family: $main-font;
+            color: $main-color;
+            text-align: center;
+            display: none;
+        }
+        &__Button {
+            margin: 35px 0px 0px 4px;
+            &_redButton {
+                width: 225px;
+                height: 40px;
+                border-radius: 40px;
+                background-color: $batton-color;
+                border: none;
+                font-family: $main-font;
+                letter-spacing: 0.5px;
+                color: $main-color;
+            }
+        }
+    }
+
+    .blockWithLogo {
+        width: 100%;
+        height: 36px;
+        @include flex(flex, row, space-between, center);
+        margin-top: 41px;
+        &__logo {
+            width: 152px;
+            font-size: 20px;
+            text-transform: uppercase;
+            font-family: $main-font;
+            color: $main-color;
+        }
+        &__autirization {
+            width: 153px;
+            @include flex(flex, row, space-between, center);
+            font-family: $second-font;
+            margin-right: 40px;
+            input {
+                width: 82px;
+                height: 30px;
+                border: 2px solid $main-color;
+                background-color: transparent;
+                border-radius: 40px;
+                text-align: center;
+                color: $main-color;
+                letter-spacing: 1.5px;
+                line-height: 17px;
+            }
+            a {
+                display: block;
+                text-decoration: none;
+                color: $main-color;
+                font-size: 13px;
+                letter-spacing: 1px;
+                line-height: 17px;
+            }
+        }
+    }
+}
+
+.dreamshare {
+    margin: 90px 0px 0px 0px;
+    width: 100%;
+    height: 460px;
+    @include flex(flex, column, flex-start, center);
+    h2 {
+        margin: 0px 0px 0px 0px;
+    }
+    h3 {
+        margin: 0px 0px 25px 0px;
+        font-size: 24px;
+        line-height: 26px;
+        color: $main-color;
+    }
+
+    p {
+        margin: 0px 0px 19px 0px;
+    }
+    span {
+        margin: 0px 0px 22px 0px;
+        display: block;
+        @include flex(flex, column, flex-end, center);
+        width: 66px;
+        height: 16px;
+        border-radius: 40px;
+        font-family: $second-font;
+        font-size: 10px;
+        line-height: 12px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: $main-color;
+        padding: 2px;
+        background-color: $batton-color;
+    }
+
+    .someBox {
+        margin: 35px 0px 0px 0px;
+        width: 100%;
+        @include flex(flex, row, space-between, center);
+        &__boxStep1 {
+            @include boxWithImage(300px, 400px, url(img/step1.png));
+            background-size: cover;
+            background-position: center;
+        }
+        &__boxStep2 {
+            @extend .someBox__boxStep1;
+            background-image: url(img/step2.png);
+            h3 {
+                margin: 0px 0px 18px 0px;
+            }
+            span {
+                margin: 0px 0px 25px 0px;
+            }
+        }
+        &__boxStep3 {
+            @extend .someBox__boxStep1;
+            background-image: url(img/step3.png);
+        }
+    }
+
+    .containerInBOX {
+        width: 83%;
+        height: 100%;
+        margin: 0 auto;
+        @include flex(flex, column, flex-end, left);
+    }
+}
+
+.meetPartner {
+    margin: 95px 0px 0px 0px;
+    width: 100%;
+    height: 360px;
+    @include flex(flex, column, flex-start, center);
+    p {
+        margin: 0px 0px 0px 0px;
+        color: $text-color;
+        text-align: center;
+    }
+
+    h2 {
+        margin: 0px 0px 0px 2px;
+    }
+
+    h4 {
+        font-size: 14px;
+        line-height: 17px;
+        margin: 20px 0px 0px 0px;
+    }
+    .boxWithPartner {
+        margin: 38px 0px 0px 5px;
+        width: 100%;
+        height: 226px;
+        @include flex(flex, row, space-between, center);
+        .somePartner1 {
+            order: 0;
+            width: 221px;
+            height: 224px;
+            @include flex(flex, column, flex-start, center);
+            &__fotoParthner1 {
+                @include boxWithImage(120px, 120px, url(img/bredley.png));
+                border-radius: 50%;
+                position: relative;
+                &_someIcon1 {
+                    width: 32px;
+                    height: 32px;
+                    position: absolute;
+                    right: -5px;
+                    bottom: -5px;
+                    border-radius: 50%;
+                    border: 4px solid $main-color;
+                    background-color: #ff4e50;
+                    background-image: url(img/Shape.png);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+        .somePartner2 {
+            order: 1;
+            @extend .somePartner1;
+            &__fotoParthner2 {
+                @extend .somePartner1__fotoParthner1;
+                background-image: url(img/marie.png);
+                &_someIcon2 {
+                    @extend .somePartner1__fotoParthner1_someIcon1;
+                    background-color: #19d4ca;
+                    background-image: url(img/Shape2.png);
+                }
+                p {
+                    margin: 0px 0px 0px 0px;
+                }
+            }
+        }
+        .somePartner3 {
+            order: 2;
+            @extend .somePartner1;
+            &__fotoParthner3 {
+                @extend .somePartner1__fotoParthner1;
+                background-image: url(img/diane.png);
+                &_someIcon3 {
+                    @extend .somePartner1__fotoParthner1_someIcon1;
+                    background-color: #ffa710;
+                    background-image: url(img/Shape3.png);
+                }
+                p {
+                    margin: 0px 0px 0px 0px;
+                }
+            }
+        }
+        .somePartner4 {
+            order: 3;
+            @extend .somePartner1;
+            &__fotoParthner4 {
+                @extend .somePartner1__fotoParthner1;
+                background-image: url(img/christofer.png);
+                &_someIcon4 {
+                    @extend .somePartner1__fotoParthner1_someIcon1;
+                    background-color: #667df3;
+                    background-image: url(img/Shape4.png);
+                }
+                p {
+                    margin: 0px 0px 0px 0px;
+                }
+            }
+        }
+    }
+    input {
+        margin: 38px 0px 0px 8px;
+        width: 180px;
+        height: 40px;
+        background-color: transparent;
+        border: 2px solid $batton-color;
+        color: $batton-color;
+        font-size: 14px;
+        line-height: 17px;
+        font-family: $main-font;
+        box-sizing: border-box;
+        border-radius: 40px;
+    }
+
+    .textAboutBradley {
+        margin: 22px 0px 0px -4px;
+    }
+
+    .textAboutMarie {
+        margin: 22px 0px 0px -2px;
+    }
+
+    .textAboutDiana {
+        margin: 27px 0px 0px 1px;
+    }
+
+    .textAboutChristopher {
+        margin: 27px 0px 0px 1px;
+    }
+}
+
+.ideas {
+    margin: 96px 0px 0px 0px;
+    @include someBox(100%, 1031px);
+    @include flex(flex, column, space-between, center);
+    .container {
+        width: 260px;
+        margin: 0 auto;
+        @include flex(flex, column, center, center);
+    }
+    h2 {
+        margin: 0px 0px 0px 0px;
+    }
+    .bigBoxWithFotos {
+        margin: 0px 0px 0px 0px;
+        @include someBox(100%, 970px);
+        @include flex(flex, column, flex-start, center);
+        .blockWithPhotos1 {
+            margin: 6px 0px 0px 2px;
+            @include someBox(100%, 310px);
+            @include flex(flex, row, space-between, center);
+            &__someNarrowPhoto1 {
+                @include boxWithImage(300px, 310px, url(img/sport.png));
+                position: relative;
+                @include flex(flex, row, center, center);
+                border-radius: 2%;
+                background-size: cover;
+                background-position: center;
+                &_darkImage {
+                    position: absolute;
+                    @include darkImage(100%, 100%, $background_color);
+                    border-radius: 2%;
+                }
+                h3 {
+                    position: relative;
+                    font-size: 22px;
+                    line-height: 27px;
+                    text-align: center;
+                    color: $main-color;
+                }
+            }
+            &__someNarrowPhoto2 {
+                @extend .blockWithPhotos1__someNarrowPhoto1;
+                background-image: url(img/healath.png);
+                &_darkImage {
+                    position: absolute;
+                    @include darkImage(100%, 100%, $background_color);
+                    border-radius: 2%;
+                }
+            }
+            &__someNarrowPhoto3 {
+                @extend .blockWithPhotos1__someNarrowPhoto1;
+                background-image: url(img/extreme.png);
+                .container {
+                    width: 228px;
+                }
+                &_darkImage {
+                    position: absolute;
+                    @include darkImage(100%, 100%, $background_color);
+                    border-radius: 2%;
+                }
+            }
+        }
+        .blockWithPhotos2 {
+            margin: 19px 0px 0px 2px;
+            @include someBox(100%, 310px);
+            @include flex(flex, row, space-between, center);
+            &__someNarrowPhoto4 {
+                @extend .blockWithPhotos1__someNarrowPhoto1;
+                background-image: url(img/games.png);
+                &_darkImage {
+                    position: absolute;
+                    @include darkImage(100%, 100%, $background_color);
+                    border-radius: 2%;
+                }
+            }
+            &__someWidePhoto1 {
+                @include boxWithImage(620px, 310px, url(img/culture.png));
+                position: relative;
+                @include flex(flex, row, center, center);
+                border-radius: 2%;
+                background-size: cover;
+                background-position: center;
+                &_darkImage {
+                    position: absolute;
+                    @include darkImage(100%, 100%, $background_color);
+                    border-radius: 2%;
+                }
+                h3 {
+                    position: relative;
+                    font-size: 22px;
+                    line-height: 27px;
+                    color: $main-color;
+                }
+            }
+        }
+        .blockWithPhotos3 {
+            margin: 21px 0px 0px 2px;
+            @include someBox(100%, 310px);
+            @include flex(flex, row, space-between, center);
+            &__someWidePhoto2 {
+                @extend .blockWithPhotos2__someWidePhoto1;
+                background-image: url(img/relaxion.png);
+                &_darkImage {
+                    position: absolute;
+                    @include darkImage(100%, 100%, $background_color);
+                    border-radius: 2%;
+                }
+            }
+            &__someNarrowPhoto5 {
+                @extend .blockWithPhotos1__someNarrowPhoto1;
+                background-image: url(img/traveling.png);
+                &_darkImage {
+                    position: absolute;
+                    @include darkImage(100%, 100%, $background_color);
+                    border-radius: 2%;
+                }
+            }
+        }
+    }
+}
+
+.desktop {
+    margin: 95px 0px 0px 0px;
+    @include someBox(100%, 158px);
+    @include flex(flex, column, flex-start, center);
+    h2 {
+        margin: 0px 0px 0px 0px;
+    }
+    p {
+        margin: 54px 0px 0px 3px;
+        color: #666666;
+        font-size: 18px;
+        line-height: 14px;
+    }
+    .searchForm {
+        margin: 24px 0px 0px 2px;
+        @include someBox(482px, 40px);
+        @include flex(flex, row, space-between, center);
+        &__text {
+            @include someBox(299px, 40px);
+            border: 1px solid #d4d4d4;
+            box-sizing: border-box;
+            box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.073313);
+            border-radius: 3px;
+            padding-left: 12px;
+            padding-top: 5px;
+        }
+
+        &__text::placeholder {
+            font-size: 14px;
+            line-height: 16px;
+            font-family: $text-font;
+            color: #666666;
+        }
+
+        &__button {
+            width: 172.12px;
+            height: 40px;
+            border-radius: 40px;
+            background-color: $batton-color;
+            border: none;
+            font-family: $main-font;
+            letter-spacing: 0.5px;
+            color: $main-color;
+        }
+    }
+}
+
+footer {
+    margin: 0px 0px 0px 0px;
+    @include someBox(100%, 224px);
+    border-top: 2px solid $batton-color;
+    margin: 106px 0px 0px 0px;
+    .container {
+        margin-top: 22px;
+        @include flex(flex, row, space-between, flex-start);
+        .logo {
+            margin: 0px 0px 0px 0px;
+            @include someBox(240px, 100%);
+            p {
+                font-size: 16px;
+                line-height: 20px;
+                color: $batton-color;
+                font-family: $second-font;
+                text-transform: uppercase;
+            }
+        }
+        .linkCompany {
+            margin: 0px 0px 0px 0px;
+            @include someBox(240px, 100%);
+            @include flex(flex, column, flex-start, flex-start);
+            p {
+                margin: 17px 0px 10px 0px;
+                font-size: 14px;
+                line-height: 17px;
+                color: black;
+                font-family: $main-font;
+            }
+            a {
+                display: block;
+                font-size: 14px;
+                line-height: 26px;
+                color: #999999;
+                font-family: $text-font;
+                text-decoration: none;
+            }
+        }
+        .partners {
+            margin: 0px 0px 0px 0px;
+            @include someBox(240px, 100%);
+            p {
+                margin: 17px 0px 0px 0px;
+                font-size: 14px;
+                line-height: 17px;
+                color: black;
+                font-family: $main-font;
+            }
+        }
+
+        .disigned {
+            margin: 0px 0px 0px 0px;
+            @include someBox(220px, 100%);
+            @include flex(flex, column, flex-start, flex-end);
+            p {
+                margin: 17px 5px 0px 0px;
+                text-align: right;
+                font-size: 10px;
+                line-height: 12px;
+                letter-spacing: 1px;
+                color: #cccccc;
+            }
+            .boxWithLogo {
+                margin: 6px 0px 0px 0px;
+                @include boxWithImage(110px, 24px, url(img/logo.png));
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 773px) and (min-width: 336px) {
+    html {
+        width: 768px;
+    }
+
+    .container {
+        width: 748px;
+    }
+    h2 {
+        font-size: 22px;
+        line-height: 27px;
+    }
+
+    header {
+        background-position: center;
+        .blockTitle {
+            width: 470px;
+            @include flex(flex, column, center, center);
+            margin: 146px 0px 0px 0px;
+            h1 {
+                margin: 0px 0px 0px 0px;
+            }
+            p {
+                margin: 28px 0px 0px 1px;
+            }
+            &__Button {
+                margin: 35px 0px 0px 4px;
+            }
+        }
+        .blockWithLogo {
+            &__logo {
+                margin: -4px 0px 0px 37px;
+            }
+        }
+    }
+
+    .dreamshare {
+        margin: 91px 0px 0px 0px;
+        h2 {
+            margin: 2px 0px 0px 0px;
+            font-size: 22px;
+            line-height: 27px;
+        }
+        h3 {
+            margin: 0px 0px 46px 0px;
+        }
+
+        p {
+            margin: 0px 0px 19px 0px;
+        }
+        span {
+            margin: 0px 0px 46px 0px;
+        }
+
+        .someBox {
+            margin: 35px 0px 0px 0px;
+            h3 {
+                font-size: 24px;
+                line-height: 14px;
+                margin: 0px 0px 45px 0px;
+            }
+            p {
+                margin: -16px 0px 15px 0px;
+            }
+            &__boxStep1 {
+                width: 236px;
+                background-position-x: 0px;
+            }
+            &__boxStep2 {
+                h3 {
+                    margin: 0px 0px 40px 0px;
+                }
+                span {
+                    margin: 0px 0px 15px 0px;
+                }
+            }
+        }
+    }
+
+    .meetPartner {
+        margin: 98px 0px 0px 0px;
+        p {
+            margin: 0px 0px 0px 0px;
+        }
+
+        h2 {
+            margin: 0px 0px 0px -1px;
+        }
+
+        h4 {
+            margin: 20px 0px 0px 0px;
+        }
+        .boxWithPartner {
+            margin: 34px 0px 0px 12px;
+            width: 492px;
+            height: 467px;
+            @include flex(flex, row, space-between, center);
+            flex-flow: wrap;
+            .somePartner1 {
+                margin: 0px 0px 0px 0px;
+                font-size: 14px;
+                line-height: 14px;
+            }
+            .somePartner2 {
+                order: 2;
+                margin: 35px 0px 0px 0px;
+            }
+            .somePartner3 {
+                order: 1;
+                margin: 0px 15px 0px 0px;
+            }
+            .somePartner4 {
+                margin: 35px 15px 0px 0px;
+            }
+        }
+        input {
+            margin: 38px 0px 0px 1px;
+        }
+
+        .textAboutBradley {
+            display: block;
+            width: 236px;
+            margin: 22px 0px 0px 0px;
+        }
+
+        .textAboutMarie {
+            margin: 22px 0px 0px 0px;
+            width: 236px;
+        }
+
+        .textAboutDiana {
+            margin: 25px 0px 0px 0px;
+            width: 236px;
+        }
+
+        .textAboutChristopher {
+            margin: 23px 0px 0px 0px;
+            width: 236px;
+        }
+    }
+
+    .ideas {
+        margin: 340px 0px 0px 0px;
+        .container {
+            width: 206px;
+        }
+        h2 {
+            margin: 0px 0px 0px 0px;
+        }
+        .bigBoxWithFotos {
+            margin: 0px 0px 0px 0px;
+            .blockWithPhotos1 {
+                margin: 1px 0px 0px 0px;
+                &__someNarrowPhoto1 {
+                    background-position-x: -40px;
+                    width: 236px;
+                    h3 {
+                        margin: 0px 0px 27px 0px;
+                    }
+                }
+                &__someNarrowPhoto2 {
+                    h3 {
+                        margin: 0px 0px 0px 0px;
+                    }
+                }
+                &__someNarrowPhoto3 {
+                    background-position-x: -22px;
+                    h3 {
+                        margin: 0px 0px 0px 0px;
+                    }
+                    .container {
+                        width: 206px;
+                    }
+                }
+            }
+            .blockWithPhotos2 {
+                margin: 19px 0px 0px 2px;
+                &__someWidePhoto1 {
+                    background-position-x: -72px;
+                    width: 492px;
+                    h3 {
+                        margin: 0px 0px 0px 0px;
+                    }
+                }
+                &__someNarrowPhoto4 {
+                    background-position-x: -31px;
+                    h3 {
+                        margin: 0px 0px 0px 0px;
+                    }
+                }
+            }
+            .blockWithPhotos3 {
+                margin: 21px 0px 0px 0px;
+                &__someNarrowPhoto5 {
+                    background-position-x: 0px;
+                    background-position-y: 0px;
+                    background-image: url(img/traveling2.png);
+                    h3 {
+                        margin: 0px 0px 0px 0px;
+                    }
+                }
+                &__someWidePhoto2 {
+                    background-position-x: -2px;
+                    h3 {
+                        margin: 0px 0px 0px 0px;
+                    }
+                }
+            }
+        }
+    }
+    footer {
+        margin: 101px 0px 0px 0px;
+        .container {
+            margin-top: 21px;
+            @include flex(flex, row, flex-start, flex-start);
+            .logo {
+                margin: 0px 0px 0px 28px;
+                @include someBox(160px, 100%);
+            }
+            .linkCompany {
+                margin: 0px 0px 0px 67px;
+                @include someBox(160px, 100%);
+                p {
+                    margin: 17px 0px 10px 0px;
+                }
+            }
+            .partners {
+                margin: 0px 0px 0px 10px;
+                @include someBox(160px, 100%);
+                p {
+                    margin: 17px 0px 0px 0px;
+                }
+            }
+
+            .disigned {
+                margin: 0px 0px 0px -8px;
+                @include someBox(140px, 100%);
+                p {
+                    margin: 17px 6px 0px 0px;
+                }
+                .boxWithLogo {
+                    margin: 6px 0px 0px 0px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 335px) {
+    html {
+        width: 320px;
+    }
+    .container {
+        width: 300px;
+    }
+    h2 {
+        font-size: 22px;
+        line-height: 27px;
+        text-align: center;
+    }
+    header {
+        background-size: cover;
+        background-image: url(img/Bitmapmobile.png);
+        height: 540px;
+        .blockTitle {
+            margin: 97px 0px 0px 0px;
+            width: 281px;
+            @include flex(flex, column, center, center);
+            h1 {
+                margin: 42px 0px 0px 0px;
+                font-size: 30px;
+                line-height: 0px;
+            }
+            p {
+                margin: 22px 0px 0px 0px;
+                font-size: 18px;
+                line-height: 24px;
+                text-align: center;
+            }
+            h5 {
+                margin: 0px 0px 0px 0px;
+                font-size: 20px;
+                line-height: 24px;
+                display: block;
+            }
+            &__Button {
+                margin: 17px 0px 0px 1px;
+                &_redButton {
+                    width: 280px;
+                }
+            }
+        }
+
+        .blockWithLogo {
+            margin: 19px 0px 0px 40px;
+            width: 100%;
+            height: 36px;
+            @include flex(flex, row, center, center);
+            &__logo {
+                display: none;
+            }
+        }
+    }
+    .dreamshare {
+        margin: 34px 0px 0px 0px;
+        width: 100%;
+        height: 780px;
+        @include flex(flex, column, flex-start, center);
+        h2 {
+            margin: 0px 0px 0px 0px;
+        }
+        h3 {
+            font-size: 24px;
+            line-height: 14px;
+            margin: 0px 0px 26px 0px;
+        }
+
+        p {
+            margin: 0px 0px 14px 0px;
+            letter-spacing: 0.4px;
+        }
+        span {
+            margin: 0px 0px 45px 0px;
+        }
+
+        .someBox {
+            margin: 14px 0px 0px 0px;
+            height: 740px;
+            @include flex(flex, column, space-between, center);
+            .containerInBOX {
+                width: 87%;
+            }
+            &__boxStep1 {
+                background-image: url(img/step1mobile.png);
+                margin: 0px 0px 0px 0px;
+                width: 300px;
+                height: 240px;
+            }
+            &__boxStep2 {
+                background-image: url(img/step2mobile.png);
+                margin: 0px 0px 0px 0px;
+                h3 {
+                    margin: 0px 0px 26px 0px;
+                }
+                span {
+                    margin: 0px 0px 30px 0px;
+                }
+            }
+
+            &__boxStep3 {
+                background-image: url(img/step3mobile.png);
+                margin: 0px 0px 0px 0px;
+            }
+        }
+
+        .containerInBOX {
+            width: 83%;
+            height: 100%;
+            margin: 0 auto;
+            @include flex(flex, column, flex-end, left);
+        }
+    }
+
+    .meetPartner {
+        margin: 36px 0px 0px 0px;
+        width: 100%;
+        height: 1040px;
+        @include flex(flex, column, flex-start, center);
+        p {
+            margin: 0px 0px 0px 0px;
+        }
+
+        h2 {
+            margin: 0px 0px 0px 2px;
+        }
+
+        h4 {
+            margin: 20px 0px 0px 0px;
+        }
+        .boxWithPartner {
+            margin: 0px 0px 0px -3px;
+            width: 100%;
+            height: 944px;
+            @include flex(flex, column, flex-start, center);
+            .somePartner1 {
+                margin: 14px 0px 0px 0px;
+            }
+            .somePartner2 {
+                margin: 15px 0px 0px 0px;
+                order: 2;
+            }
+            .somePartner3 {
+                margin: 0px 0px 0px 5px;
+                order: 1;
+            }
+            .somePartner4 {
+                order: 3;
+                margin: -4px 0px 0px 5px;
+            }
+        }
+        input {
+            margin: -5px 0px 0px -2px;
+            width: 280px;
+        }
+
+        .textAboutBradley {
+            margin: 22px 0px 0px -4px;
+            width: 236px;
+        }
+
+        .textAboutMarie {
+            margin: 22px 0px 0px -2px;
+            width: 236px;
+        }
+
+        .textAboutDiana {
+            margin: 27px 0px 0px 1px;
+            width: 236px;
+        }
+
+        .textAboutChristopher {
+            margin: 20px 0px 0px -2px;
+            width: 236px;
+        }
+    }
+    .ideas {
+        margin: 28px 0px 0px 0px;
+        height: 985px;
+        .container {
+            width: 206px;
+        }
+        h2 {
+            margin: 0px 0px 0px 0px;
+            width: 280px;
+        }
+        .bigBoxWithFotos {
+            margin: 0px 0px 0px 0px;
+            height: 900px;
+            @include flex(flex, column, space-between, center);
+            .blockWithPhotos1 {
+                margin: 0px 0px 0px 0px;
+                height: 380px;
+                @include flex(flex, column, space-between, center);
+                &__someNarrowPhoto1 {
+                    margin: 0px 0px 0px 0px;
+                    width: 300px;
+                    height: 120px;
+                    background-image: url(img/sportmobile.png);
+                    h3 {
+                        margin: -25px 0px 0px 0px;
+                    }
+                }
+                &__someNarrowPhoto2 {
+                    margin: 0px 0px 0px 0px;
+                    background-image: url(img/healthmobile.png);
+                    h3 {
+                        margin: 0px 0px 0px 0px;
+                    }
+                }
+                &__someNarrowPhoto3 {
+                    margin: 0px 0px 0px 0px;
+                    background-image: url(img/extremmobile.png);
+                    h3 {
+                        margin: 0px 0px 0px 0px;
+                    }
+                }
+            }
+            .blockWithPhotos2 {
+                margin: 0px 0px 0px 0px;
+                height: 250px;
+                @include flex(flex, column, space-between, center);
+                &__someNarrowPhoto4 {
+                    margin: 0px 0px 0px 0px;
+                    background-image: url(img/gamesmobile.png);
+                    h3 {
+                        margin: 0px 0px 0px 0px;
+                    }
+                }
+                &__someWidePhoto1 {
+                    background-image: url(img/culturemobile.png);
+                    margin: 0px 0px 0px 0px;
+                    width: 300px;
+                    height: 120px;
+                    h3 {
+                        margin: 0px 0px 0px 0px;
+                    }
+                }
+            }
+            .blockWithPhotos3 {
+                margin: 0px 0px 0px 0px;
+                height: 250px;
+                @include flex(flex, column, space-between, center);
+                &__someWidePhoto2 {
+                    margin: 0px 0px 0px 0px;
+                    background-image: url(img/relaxionmobile.png);
+                    h3 {
+                        margin: 0px 0px 0px 0px;
+                    }
+                }
+                &__someNarrowPhoto5 {
+                    background-image: url(img/travelingmobile.png);
+                    margin: 0px 0px 0px 0px;
+                    background-position-y: top;
+                    h3 {
+                        margin: 0px 0px 0px 0px;
+                    }
+                }
+            }
+        }
+    }
+
+    .desktop {
+        margin: 36px 0px 0px 0px;
+        height: 195px;
+        h2 {
+            margin: 0px 0px 0px 0px;
+            width: 280px;
+        }
+        p {
+            margin: 20px 0px 0px 0px;
+        }
+        .searchForm {
+            margin: 12px 0px 0px 0px;
+            @include someBox(280px, 95px);
+            @include flex(flex, column, space-between, center);
+            &__text {
+                margin: 0px 0px 0px 0px;
+                width: 100%;
+            }
+            &__button {
+                padding-left: 23px;
+                letter-spacing: 0.2px;
+                margin: 0px 0px 0px 0px;
+                width: 100%;
+                margin: 0px 0px 3px 0px;
+                font-size: 14px;
+                line-height: 17px;
+            }
+        }
+    }
+
+    footer {
+        margin: 38px 0px 0px 0px;
+        height: 204px;
+        .container {
+            margin: 3px 0px 0px 21px;
+            @include flex(flex, column, space-between, center);
+            width: 280px;
+            .logo {
+                margin: 0px 0px 0px 0px;
+                @include someBox(100%, 20px);
+                text-align: center;
+            }
+            .linkCompany {
+                margin: -10px 0px 0px 0px;
+                @include someBox(100%, 17px);
+                @include flex(flex, column, flex-start, center);
+                p {
+                    margin: 0px 3px 0px 0px;
+                }
+                .someContainer {
+                    margin: 0px 0px 10px -7px;
+                    width: 190px;
+                    @include flex(flex, column, space-around, center);
+                    flex-flow: wrap;
+                    a {
+                        display: inline-block;
+                        height: 25px;
+                        width: auto;
+                        letter-spacing: 0.2px;
+                    }
+                }
+            }
+            .partners {
+                margin: 0px 0px 0px 0px;
+                @include someBox(100%, 17px);
+                p {
+                    margin: 17px 0px 0px 0px;
+                    text-align: center;
+                }
+            }
+
+            .disigned {
+                margin: 0px 0px 0px 0px;
+                @include someBox(100%, 40px);
+                @include flex(flex, column, space-between, center);
+                p {
+                    margin: 0px 0px 0px 0px;
+                }
+                .boxWithLogo {
+                    margin: 0px 0px 0px 0px;
+                }
+            }
+        }
+    }
+}
