@@ -97,9 +97,6 @@ header {
                 
             }
         }
-        &__Button:hover{
-            cursor: pointer;
-        }
     }
 
     .blockWithLogo {
@@ -119,9 +116,9 @@ header {
             @include flex(flex, row, space-between, center);
             font-family: $second-font;
             margin-right: 40px;
-            input {
-                width: 82px;
-                height: 30px;
+            button{
+                width: 90px;
+                height: 36px;
                 border: 2px solid $main-color;
                 background-color: transparent;
                 border-radius: 40px;
