@@ -43,6 +43,10 @@ h2 {
   line-height: 32px;
 }
 
+.cursorPointer:hover {
+  cursor: pointer;
+}
+
 header {
   height: 700px;
   background-image: url(img/Bitmap.png);
@@ -92,6 +96,9 @@ header .blockTitle__Button_redButton {
   font-family: "Montserrat-Bold";
   letter-spacing: 0.5px;
   color: #FFFFFF;
+}
+header .blockTitle__Button:hover {
+  cursor: pointer;
 }
 header .blockWithLogo {
   width: 100%;
